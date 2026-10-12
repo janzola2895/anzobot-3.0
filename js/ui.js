@@ -171,7 +171,7 @@
       } else if (id === 'LEDGER') {
         h += '<div class="row"><span>Ledger vs broker</span><b class="' + (S.ledger.ok ? 'up' : 'dn') + '">' + (!S.ledger.ok ? 'Descuadre' + (app.publicMode ? '' : ' ' + O.fmtUsd(S.ledger.diff)) : S.ledger.unknown ? 'Sin conciliar todavía' : 'Cuadra') + '</b></div>';
       } else if (id === 'DATA') {
-        h += '<div class="row"><span>MetaTrader 5</span><b class="' + (S.mt5.connected ? 'up' : 'dn') + '">' + (S.mt5.connected ? 'Conectado' : 'Sin señal') + '</b></div>';
+        h += '<div class="row"><span>MetaTrader 5</span>' + (S.placeholder ? '<b>Sin datos del bot</b>' : '<b class="' + (S.mt5.connected ? 'up' : 'dn') + '">' + (S.mt5.connected ? 'Conectado' : 'Sin señal') + '</b>') + '</div>';
         if (!app.publicMode) h += '<div class="row"><span>XAUUSD</span><b>' + O.fmtMaybe(S.price, 2) + '</b></div>';
       } else {
         h += '<div class="row"><span>Cola de órdenes</span><b>vacía</b></div>';

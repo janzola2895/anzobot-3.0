@@ -53,7 +53,7 @@
       app.stale = (app.source.mode === 'live' || app.source.mode === 'public') && app.source.status !== 'live';       // sin datos frescos del bot: la sala se apaga un poco
       if (app.stale) target = Math.max(target, 0.3);
       app.darkness += (target - app.darkness) * Math.min(1, dt * 1.5);
-      app.alarm = S.mt5.connected ? 0 : 1;
+      app.alarm = !S.placeholder && !S.mt5.connected ? 1 : 0;        // sin el primer estado real (bot apagado, espejo sin datos) no se sabe nada de MT5: ni alarma ni «sin señal»
     };
     return app;
   };

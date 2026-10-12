@@ -165,7 +165,7 @@
       case 'RISK': return S.risk.locked ? 'risk_locked' : 'risk';
       case 'EOD': return S.eod.phase !== 'open' ? 'eod_closed' : 'eod';
       case 'LEDGER': return S.ledger.ok ? 'ledger' : 'ledger_bad';
-      case 'DATA': return S.mt5.connected ? 'data' : 'data_down';
+      case 'DATA': return S.placeholder || S.mt5.connected ? 'data' : 'data_down';       // el estado vacio (aun sin datos del bot) no es una caida de MT5
       default: return 'orders';
     }
   };
