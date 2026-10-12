@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src https://raw.githubusercontent.com; base-uri 'none'; form-action 'none'">
+<meta name="office-public-url" content="https://raw.githubusercontent.com/janzola2895/anzobot-3.0/data/state.json">
+<meta name="robots" content="noindex">
+<title>ANZOBOT Office · espejo público</title>
+<link rel="stylesheet" href="css/office.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="brand"><span class="logo">AO</span><div><b>ANZOBOT Office</b><small id="brandMode">Espejo público</small></div></div>
+    <div class="chips">
+      <span class="chip" id="chipSrc" hidden>—</span>
+      <span class="chip" id="chipClock">—</span>
+      <span class="chip" id="chipSession">—</span>
+      <span class="chip" id="chipMt5">—</span>
+      <span class="chip" id="chipEod">—</span>
+      <span class="chip" id="chipLedger">—</span>
+    </div>
+    <div class="pnl">
+      <span class="lbl" id="pnlLbl">Día vs. tope</span>
+      <b id="pnlVal">—</b>
+      <div class="pbar"><i id="pnlBar"></i></div>
+      <small id="price"></small>
+    </div>
+    <button id="btnReplay" hidden>Repetir un día</button>
+    <button id="btnSim" hidden>Simulador</button>
+  </header>
+  <main id="stage">
+    <canvas id="cv"></canvas>
+    <div id="ficha" hidden></div>
+    <div id="tip" hidden></div>
+    <div id="modal" hidden></div>
+    <p class="mirror-note">Espejo público de solo lectura: sin montos ni cuenta, con ~10 min de retraso. Los personajes son del bot de trading de su dueño; esto no es una recomendación de inversión.</p>
+  </main>
+  <aside id="simPanel" hidden></aside>
+</div>
+<script src="js/util.js"></script>
+<script src="js/cast.js"></script>
+<script src="js/world.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/render.js"></script>
+<script src="js/character.js"></script>
+<script src="js/live.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/director.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+<script src="js/public.js"></script>
+</body>
+</html>
